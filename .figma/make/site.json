@@ -1,0 +1,10 @@
+{
+  "description": "Discover Hamburg Jeans, a local retailer's website designed to attract customers to in-store consultations with a focus on personalized service and expert advice.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
