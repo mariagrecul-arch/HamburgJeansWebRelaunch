@@ -12,10 +12,13 @@ export default defineConfig(({ mode }) => {
   const emitSourcemaps = mode === 'development'
 
   return {
-    base: base: process.env.FIGMA_PUBLIC_URL
-  ? `${process.env.FIGMA_PUBLIC_URL}/`
-  : '/HamburgJeansWebRelaunch/',
-    },
+    base: process.env.FIGMA_PUBLIC_URL
+        ? `${process.env.FIGMA_PUBLIC_URL}/`
+        : '/HamburgJeansWebRelaunch/',
+      build: {
+        sourcemap: emitSourcemaps ? 'inline' : false,
+        minify: !emitSourcemaps,
+      },
     plugins: [
 react(),
       tailwindcss(),
